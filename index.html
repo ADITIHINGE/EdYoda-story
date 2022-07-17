@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header id="nav">
+     <div id="main1">
+        <div>
+      <img class="logo" src="data:image/jpeg;base64,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"></span>
+      <p id="p">Stories</p>
+      </div>
+   
+        <div id="exp">
+            <p id="sel">Explore Categories</p>
+            
+            <select id="opt">
+                <option></option>
+            <option><a href="#parent">Artificial Intelligence</a></option>
+            <option><a href="#parent">cloud Computing</a></option>
+            <option><a href="#parent">DevOps</a></option>
+            <option><a href="#parent">Programming Languages</a></option>
+            <option><a href="#parent">mobile Application Development</a></option>
+            <option><a href="#parent">Technology and Tools</a></option>
+            <option><a href="#parent">Get a Job in a Tech Company</a></option>
+        </select>
+        </div>
+    
+        <div class="pgf">
+           
+            <p id="pgf">EdYoda is free learning and knowledge
+                sharing platform for techies</p>
+        </div>
+        <div >
+            <button id="btn"><a id="a" href="https://www.edyoda.com/">Go To Main Website</a></button>
+        
+    </div>
+     </div>
+    </header>
+    <div class="container">
+    <h1 id="trend">Trending Posts</h1>
+     <div id="img">
+        <div><img id="img1" src="https://edyoda.s3.amazonaws.com/media/blog-images/ace-soft-skills-small.jpg">
+            <div><img id="img2" src="https://edyoda.s3.amazonaws.com/media/blog-images/aptitude-small.jpg">
+               <img id="img3" src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_cloud_computing.jpeg">
+            </div>
+     </div>
+     </div>
+     <h2 id="latest">Latest Posts</h2>
+     <div id="fil">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAAbFBMVEUAAAA1gME1gME1f8A1gME1gMExd7Q0f8AxeLYzfb00fr80f8Aze7oze7o1gMA0fr4zfLwzfb0zfb0yerg0fb00f8AzfLszfLwzfr40f780f8Azfb00f8A0f8AzfLwzfr81gME0fr4zfLs1gMEkRxAZAAAAI3RSTlMAHOP9f/oT1RAO281OROfhFaSUSkCwnpmOcTfFim9YB/AmGRclE4kAAAF9SURBVGje7dfrboJAEAXgA7jLXRAExRu2vP87No1NJjYpexm3SZv5/vgD9QB7mCwQQggh/rI2YtCwUpUxw7mGhTZdWMoWZlHMC4kjmL0Xv3Al8zHhZCQTbOid159/fRwyWIlK+p2rQcPSvnBLoa+mJ1jrG7+bVdRwcLsvHpoeLuaLepxh4nAd9xvc5F1ityx0Juoyw5EeXZely2DAL/JOw8M+NafQ4TKCl7pxeED28FRtrctbw9uk1u4YHdhW8Jd39LislXcCRzZalEt1OVj0YF76MQPTyVjkQYOtprlvmO4cfbysoOnOc6UiG6Y7Q36kIn8v7xWvkh1+mPvqmIPBtIExb0385z5/ups3MM+2b3ixi3nXy7eREAmREAmREAmRkPWQsw4Xkiz05hMqJEkoI0wIZTQVEC7k8VH0CGDztB5pDRKkXfTWHjJkOMGAX+Fdi0CowqMGCROiDpQRKkR1GcLZ0PtbODf1OUquOULKpzQ+VwitjTIIIYQQ/9wHYyfu5wm8dM0AAAAASUVORK5CYII=">
+        <p id="fil1">Filter by Category</p>
+     </div>
+     
+     <div id="btns">
+    
+        <button id="btn1"><a href="#parent">All</a></button>
+       <button id="btn1"><a href="#parent">Artificial Intelligence</a></button>
+       <button id="btn1"><a href="#parent">Cloud Computing</a></button>
+       <button id="btn1"><a href="#parent">DevOps</a></button>
+       <button id="btn1"><a href="#parent">Programming Languages</a></button>
+       <button id="btn1"><a href="#parent">Mobile Application Development</a></button>
+       <button id="btn1"><a href="#parent">Technology and Tools</a></button>
+    
+       <button id="btn1"><a href="#parent">Tech a Job in a Company</a></button>
+       <button id="btn1"><a href="#parent">Others</a></button>
+    
+    </div>
+
+
+      
+
+     <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/seven_reasons_to_learn_python_sW8FK0o.jpg" 
+            alt="1">
+            
+                <h1 id="fre">Fresh Graduate or IT professional Looking for a job ? - 7 reasons to learn Python NOW!</h1>
+              
+                <h4 id="fre1"><span style="color:blue" >Arman Ahmed </span> | 05 Jul 2019</h4>
+                <p id="fre2"> If you are a fresh graduate - or new to IT - looking for the next job, you need to read this.
+
+                    The last couple of years zekeLabs gave me a unique opportunity</p>
+            
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/edyoda-learn-technology-for-free.jpg" 
+                alt="2">
+                <h1 id="fre">Introducing you all to EdYoda - www.edyoda.com</h1>
+                <h4 id="fre1"><span style="color:blue" >Arman Ahmed </span>   | 05 Jul 2019</h4>
+                <p id="fre2">Really ecstatic and immensely proud to introduce you all to our latest attempt of adding value and making an impact to the world we are a part of.</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/devops_tJSKVcn.jpg" 
+                alt="3">
+                <h1 id="fre">From identity crisis to the Success Story - The DevOps revolution!</h1>
+                <h4 id="fre1"><span style="color:blue" >Kalyan Mahalingam</span>   | 05 Jul 2019</h4>
+                <p id="fre2">DevOps is a paradigm shift in the way how software products are being built in the modern day Information Technology (IT) organizations. It is becoming the</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/Data_Scientist_900_350_ZaahyyI.jpg" 
+            alt="4">
+            
+                <h1 id="fre">Typical day of Data Scientist - An insider story!</h1>
+              
+                <h4 id="fre1"><span style="color:blue" >Saurav Ghosh </span>  | 05 Jul 2019</h4>
+            <p id="fre2">I’ve been a Data Scientist for three years now and I can only say that Chris Lynch was right -
+
+                Big Data and Data Science are the foundation of all the trends</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/edyoda_blog_aws_cloudday_17may2018_Bangalore_big_Kv4d7yt.jpg" 
+                alt="5">
+                <h1 id="fre">Amazon Web Services (AWS) Cloud Day - Bangalore</h1>
+                <h4 id="fre1"><span style="color:blue" >Kalyan Mahalingam</span> | 05 Jul 2019</h4>
+                <p id="fre2">It was indeed a hectic day with back to back session sandwiched by good food and tea (on a lighter note, need to investigate the tactics behind the 5-star hotels </p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/cloud-meetup-edyoda-large_xJDPPZO.jpg" 
+                alt="6">
+                <h1 id="fre">edYoda Meetup #01 : A Date with Cloud</h1>
+                <h4 id="fre1"><span style="color: blue">Ashish Pandey</span>  | 05 Jul 2019
+
+                </h4>
+                <p id="fre2">I recently had the opportunity to lead the initiative to organize the first Cloud meetup for edYoda. Here, I recount my experience in organizing the very first in</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/pitanjal-industry-4-cover-image.png" 
+            alt="first">
+            
+                <h1 id="fre">Industry 4.0 - The Prospects & Journey ahead!</h1>
+              
+                <h4 id="fre1"><span style="color: blue">Pitanjal Dutta</span> | 05 Jul 2019</h4>
+            <p id="fre2">Did you ever dream a world where computers are connected and will communicate with one another to ultimately make decisions without human</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.ap-south-1.amazonaws.com/media/blog-images/database+4.png" 
+                alt="8">
+                <h1 id="fre">Why do Database Systems Exist ?</h1>
+                <h4 id="fre1"><span style="color:blue" >Pitanjal Dutta</span> | 05 Jul 2019</h4>
+                <p id="fre2">Wondering why Database Management Systems like MySQL, NOSQL, MSSQL, Oracle SQL, MongoDB form the fundamental blocks behind...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/aptitude_900_350_75EPHHr.png" 
+                alt="9">
+                <h1 id="fre">Master your General Aptitude Job Interview...</h1>
+                <h4 id="fre1"><span style="color:blue" >Pitanjal Dutta</span> | 05 Jul 2019</h4>
+                <p id="fre2">A general aptitude becomes very important, when you apply for a job in a tech company. You might be highly skilled in your subject domain. However, these basic...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/soft_skill_900_350-large.png" 
+            alt="10">
+            
+              <h1 id="fre">Ace your Soft Skills - Tips to crack the job interview</h1>
+              <h4 id="fre1"><span style="color:blue" >Pitanjal Dutta</span>| 05 Jul 2019</h4>
+            <p id="fre2">Soft skills are seen to be as important as your technical skill set. When an organisation is hiring, soft skills is given a lot of weightage and thus becomes a...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn-artificial-intelligence_E1bep5u.jpeg" 
+                alt="11">
+                <h1 id="fre">Getting started with Artificial Intelligence</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 08 Jul 2019</h4>
+                <p id="fre2">We’re rapidly moving towards a day and age where almost everything can be controlled by machines and one of the most revolutionary moves has been th...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/WhatsApp_Image_2019-06-19_at_17.55.10_sLZ1gKv.jpeg" 
+                alt="12">
+                <h1 id="fre">Learn these Programming...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 08 Jul 2019</h4>
+                <p id="fre2">Starting a career as a software developer obviously requires one to undertake a programming languages course that can cover everything from the basics to...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_cloud_computing_70own2G.jpeg" 
+            alt="13">
+            
+              <h1 id="fre">Learn cloud computing- an introduction</h1>
+                <h4 id="fre1"> <span style="color:blue" >EdYoda</span>|11 Jul 2019</h4>
+            <p id="fre2">If you learn cloud computing then you can make things much easier for your projects. You do not have to rely on multiple hard drives or data storage devices for with...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/1_G1i7GlRPMGboYZdRhOeWaw_H1xCtOl.png" 
+                alt="14">
+                <h1 id="fre">Building the University for the 21st century —...</h1>
+                <h4 id="fre1"> <span style="color:blue" >Arman Ahmed</span> | 20 Jul 2019</h4>
+                <p id="fre2">The google analytics dashboard was firing up, the whole team, each one of us was on the edges — half elated, half anxious and a little worried. And it happened,...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/data-mining-an-overview_8O9fl2t.jpg" 
+                alt="15">
+                <h1 id="fre">Data Mining: An overview</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 21 Jul 2019</h4>
+                <p id="fre2">The process used by companies to convert raw data into useful information is called Data Mining. It is a process of searching, collecting, filtering and analyzin...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/an-introduction-to-green-cloud-computing_L6tfnc9.jpg" 
+            alt="16">
+            
+              <h1 id="fre">An Introduction to Green Cloud Computing</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 21 Jul 2019</h4>
+            <p id="fre2">Sustainability has been gaining importance since the last two decade because of the extensive exploitation of natural resources by mankind. It has been noted...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/overview-of-natural-language-processing-in-artificial-intelligence_7qjWjMQ.jpg" 
+                alt="17">
+                <h1 id="fre">Overview of Natural Language Processing i...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 21 Jul 2019 </h4>
+                <p id="fre2">Over the last few years, Artificial Intelligence has made a prominent space as it uses technology that has made machines capable to perform...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/how-humans-tame-the-world-with-artificial-intelligence_iGMp4Jt.jpg" 
+                alt="18">
+                <h1 id="fre">How Humans Tame the World with Artificial...</h1>
+                <h4 id="fre1" ><span style="color:blue" >EdYoda</span> | 23 Jul 2019</h4>
+                <p id="fre2">Humans evolution and usage of technology have been a constant feature throughout the history of Humanity. So evolution and tech have always been a big constant...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/cyber-security-analysis-of-digital-world_m81m18d.jpg" 
+            alt="19">
+            
+              <h1 id="fre">Cyber Security: Analysis of the digital world</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 23 Jul 2019</h4>
+            <p id="fre2">When computers were standalone devices, security was a minimal concern. Mainframes had their own protected facilities. Slowly and steadily as computin...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/importance-of-big-data-management-and-its-challenges_nvaeWva.jpg" 
+                alt="20">
+                <h1 id="fre">Big Data: Importance of Big Data Management...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 23 Jul 2019</h4>
+                <p id="fre2">Big data is the phrase that is used to define large structured and unstructured volumes of data that has the potential to be mined for information and used in machine...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/why-you-should-accelerate-your-knowledge-on-mobile-app-development_wzc4fWT.jpg" 
+                alt="21">
+                <h1 id="fre">Why you should accelerate your...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 23 Jul 2019</h4>
+                <p id="fre2">Over the most recent 10 years, Android has become famous, not only with its themes that have candy names yet in addition to its broad, and sudden, achievement...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/the-new-way-to-encrypt-cloud-data-cloud-cryptography_yje2XOW.jpg" 
+            alt="22">
+            
+              <h1 id="fre">The New Way to Encrypt Cloud Data- Cloud...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 23 Jul 2019</h4>
+            <p id="fre2">Distributed computing is one of the well-known subjects of the present world. The Internet has begun driving all these new innovations. The Internet was...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/cloud-computing-an-umbrella-term-that-enables-digital-transformation_3qTFXlw.jpg" 
+                alt="23">
+                <h1 id="fre">Cloud Computing- An Umbrella Term that...
+                </h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 23 Jul 2019</h4>
+                <p id="fre2">Innovation and us holds a bond that compliments each other. Digital transformations without cloud computing as its partner are like a half-built bridge. As it...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/understanding-devops_LI08hxv.jpg" 
+                alt="24">
+                <h1 id="fre">Understanding DevOps</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 23 Jul 2019</h4>
+                <p id="fre2">DevOps is a term derived after combining development and operation for a common purpose- driving the development of operational processes. It...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/a-primer-on-python-programming-tutorial-for-beginners_6Sr2kHR.png" 
+            alt="25">
+            
+              <h1 id="fre">A Primer on Python Programming Tutorial...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 29 Jul 2019</h4>
+               <p id="fre2">Python has been the most dominant programming language in the development community for quite a few years now. This is evident from the fact that...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview_jvxxxO3.png" 
+                alt="26">
+                <h1 id="fre">Automation Testing: An Overview</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 29 Jul 2019</h4>
+                <p id="fre2">Software is all around us and it shapes the world differently. It shapes how the objects are designed, what information we receive, how and where we work...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/react-native-vs-flutter_BVuLdKl.png" 
+                alt="27">
+                <h1 id="fre">React Native Vs Flutter: Breaking the confusion...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 29 Jul 2019</h4>
+                <p id="fre2">The two biggest social platforms have created a buzz in the application development industry. React Native by Facebook and Flutter by Google are the latest...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online_x2fpIz6.png" 
+            alt="28">
+            
+              <h1 id="fre">Introduction To A Machine Learning...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 23 Aug 2019</h4>
+            <p id="fre2">We have had an insight into Artificial Intelligence. Well, one of its subfields is machine learning and this introduction will help you get a fair idea of what this...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/Mean_Stack_vs_LAMP_stack.png" 
+                alt="29">
+                <h1 id="fre">LAMP Stack Vs MEAN stack: Choosing the...
+                </h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 24 Aug 2019</h4>
+                <p id="fre2">In today’s dynamic world, developing a rapid application with a smooth user interface that can adapt to specific features is the main business requirement....</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/4_eSRlqfD.png" 
+                alt="30">
+                <h1 id="fre">Impact of Cloud Computing in various...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 24 Aug 2019</h4>
+                <p id="fre2">Cloud computing has been rapidly gaining pace in the world of information technology. It has been observed that over 90% of global enterprises are using clou...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/3_Qbv1T8k.png" 
+            alt="31">
+            
+                <h1 id="fre">Fresh Graduate or IT professional Looking for a job ? - 7 reasons to learn Python NOW!</h1>
+              
+                <h4 id="fre1"><span style="color:blue" >Arman Ahmed </span> | 05 Jul 2019</h4>
+                <p id="fre2"> If you are a fresh graduate - or new to IT - looking for the next job, you need to read this.
+
+                    The last couple of years zekeLabs gave me a unique opportunity</p>
+            
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/5_9jUbbUb.png" 
+                alt="32">
+                <h1 id="fre">Breaking the Myths around Cybersecurity</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 26 Aug 2019</h4>
+                <p id="fre2">Cybersecurity plays an integral role in the process of good business models. But even cybersecurity programs built with good intentions can fall short in...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/7_WsnOXes.png" 
+                alt="33">
+                <h1 id="fre">Importance of Data Backup and Recovery i..</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 26 Aug 2019</h4>
+                <p id="fre2">A business must always introspect the areas where they 
+                    lack in order to bring about a positive change in the work environment. One of the main...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div id="parent">
+        <div id="child">
+            <img src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2_Ctzrh0e.png" 
+            alt="34">
+            
+              <h1 id="fre">What is Web Scraping?</h1>
+                <h4 id="fre1"><span style="color:blue" >Zac Clancy</span> | 25 Sep 2019</h4>
+            <p id="fre2">Simply put, web scraping is one of the tools developers use to gather and analyze information from the internet. Some websites and platforms offer application...</p>
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1_Ol9zdTB.png" 
+                alt="35">
+                <h1 id="fre">What is Income Share Agreement?</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 14 Oct 2019</h4>
+                <p id="fre2">The term Income Share Agreement has been around for a long time since 1955 to be precise. Surprised, eh? It was first introduced by Milton Friedman,...</p>
+
+            
+
+            </div>
+            <div id="child">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1_uTlUxq8.png" 
+                alt="36">
+                <h1 id="fre">Practical Machine Learning with Python...</h1>
+                <h4 id="fre1"> <span style="color:blue"> Daniel Pyrathon</span> | 16 Oct 2019</h4>
+                <p id="fre2">Machine learning is a field of artificial intelligence that uses statistical techniques to give computer systems the ability to “learn” (e.g., progressively...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+
+
+    <div class="parent1">
+    
+            <div id="main">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/EdYoda_Admission_Test_Image_wFfao4c.png" 
+                alt="37">
+                <h1 id="fre">Your Guide to EdYoda Admission Test</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span> | 03 Feb 2020</h4>
+                <p id="fre2">All about EdYoda admissions test and how to avail the scholarships upto INR 2,50,000...</p>
+
+            
+
+            </div>
+            <div id="main">
+                <img src="https://edyoda.s3.amazonaws.com/media/blog-images/MicrosoftTeams-image_5.png" 
+                alt="38">
+                <h1 id="fre">All about AITEST and how to avail rewards u...</h1>
+                <h4 id="fre1"><span style="color:blue" >EdYoda</span>| 01 Mar 2022</h4>
+                <p id="fre2">Ever since 2019, after a solid hit from the falling rate of economic growth, the job market seems to be challenging. With the technology-enabled disruption...</p>
+
+            
+
+            </div>
+
+        
+    </div>
+</div>
+ 
+    </div>
+    
+    <footer>
+        <div id="footer">
+            <!-- <div class="flex-container"> -->
+                <div class="section">
+                    <h3 style="color:#ffffff80"id="h">Edyoda</h3>
+                    <a href="https://www.edyoda.com/about">About Us</a><br>
+                    <a href="https://www.edyoda.com/contact-us">Contact Us</a><br>
+                    <a href="https://www.edyoda.com/terms">Terms of Use</a><br>
+                    <a href="https://www.edyoda.com/privacy">Privacy Policy</a><br>
+                    
+                 </div>               
+                  <div class="section">
+                    <h3 style="color:#ffffff80"id="h">RESOURCES</h3>
+                    <a href="https://www.edyoda.com/learning-path/1">Learning Paths</a><br>
+                    <a href="https://www.edyoda.com/courses/all">Courses</a><br>
+                    <a href="https://www.edyoda.com/videos/all">Learning Videos</a><br>
+                    <a href="https://www.edyoda.com/channel/all">Educators</a><br>
+                    <a href="https://university.edyoda.com/?utm_source=UniversityFooter&utm_medium=UniversityFooter&utm_campaign=UniversityFooter&utm_id=UniversityFooter&_ga=2.262720908.1661600252.1657544134-1896140291.1655478824">University</a><br>
+                    <a href="https://aitest.edyoda.com/?utm_source=EYAITESTFOOTER&utm_medium=EYAITESTFOOTER&utm_campaign=EYAITESTFOOTER&utm_id=EYAITESTFOOTER&_ga=2.6464818.1661600252.1657544134-1896140291.1655478824">AITEST</a><br>
+                    
+                 </div>
+                 <div class="section">
+                    <h3 style="color:#ffffff80"id="h">FOR ENTERPRISES</h3>
+                    <a href="https://www.zekelabs.com/" id="h">Train Your Employees</a>
+                    <h3 style="color:#ffffff80"id="h2">QUICK LINKS</h3>
+                    <a href="https://www.edyoda.com/learn-and-earn">Learn and Earn</a><br>
+                    <a href="https://www.edyoda.com/become-learning-enabler">Become a Learning Enabler</a><br>
+                    <a href="https://www.edyoda.com/learning-enabler-tips">Tips for Learning Enabler</a><br>
+                    <a href="https://www.edyoda.com/requestnewtopic">Request New Topic</a><br>
+                    <a href="https://www.edyoda.com/certification">Certification</a><br>
+                    <a href="https://www.edyoda.com/affiliate-program">Affilate Program</a><br>
+
+
+                    
+                 </div>
+                 <div class="section1">
+                    <h3 style="color:#ffffff80" id="h">CONNECT</h3>
+                    <p id="fl">
+                        2nd Floor #188,Survey No-123/1,</p>
+                        <p id="fl"> Incubes Building Next to McDonalds</p>
+                       <p id="fl"> ITPL Main Rd,Brookefield,</p>
+                        <p id="fl">bengaluru,Karnataka-560037,India.</p>
+                        <!-- <i class="fa fa-bell" aria-hidden="true"></i> -->
+                      <p id="f2">hello@edyoda.com</p>
+
+                      <p id="f3">© 2022</p>
+                        <p id="f1">zekeLabs Technologies Private Limited</p>
+                  
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                    <!-- <img src="https://t3.ftcdn.net/jpg/00/95/07/14/240_F_95071432_1O8BWEIDGtd27ogifnx0aIiCcsDcLtUD.jpg" height="50px"width="50px"/>
+                    <img src="" height="50px"width="50px"/>
+                    <img src="" height="50px"width="50px"/>
+                    <img src="" height="50px"width="50px"/> -->
+                    
+                </div>
+                </div>
+              <!-- </div> -->
+             
+        </div>
+
+    </footer>
+
+</body>
+</html>
